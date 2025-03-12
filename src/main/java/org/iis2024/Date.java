@@ -59,22 +59,22 @@ public class Date {
    * @param year The year (should ideally be within the valid range of 1900 to 2050 for validation
    *     to pass).
    */
-  public Date(int day, int month, int year) {
-    this.day = day;
-    this.month = month;
-    this.year = year;
+  public Date(int dia, int mes, int año) {
+    this.day = dia;
+    this.month = mes;
+    this.year = año;
   }
 
-  /**
-   * Validates the date according to the predefined rules: the year must be within 1900 to 2050, the
-   * month within 1 to 12, and the day valid within the given month and year, considering leap
-   * years.
-   *
-   * This method utilizes {@link SimpleDateFormat} to parse the date, configured to be
-   * non-lenient to ensure strict validation against the provided day, month, and year.
-   *
-   * @return true if the date is valid, false otherwise.
-   */
+    /**
+     * Validates the date according to the predefined rules: the year must be within 1900 to 2050, the
+     * month within 1 to 12, and the day valid within the given month and year, considering leap
+     * years.
+     *
+     * This method utilizes {@link SimpleDateFormat} to parse the date, configured to be
+     * non-lenient to ensure strict validation against the provided day, month, and year.
+     *
+     * @return true if the date is valid, false otherwise.
+     */
   public boolean validate() {
     SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
     dateFormat.setLenient(false);
